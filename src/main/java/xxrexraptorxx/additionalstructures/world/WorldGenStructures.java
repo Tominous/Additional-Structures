@@ -28,7 +28,7 @@ public class WorldGenStructures implements IWorldGenerator {
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 		if(world.getWorldInfo().isMapFeaturesEnabled()) {
-			int blockX = (chunkX * 16) + random.nextInt(15);			//int blockX = chunkX * 16 + random.nextInt(16) + 8;   OLD
+			int blockX = (chunkX * 16) + random.nextInt(15);			int blockX = chunkX * 16 + random.nextInt(16) + 8;   OLD
 			int blockZ = (chunkZ * 16) + random.nextInt(15);
 			
 		if (world.provider.getDimension() == DimensionType.THE_END.getId()) {
@@ -68,26 +68,26 @@ public class WorldGenStructures implements IWorldGenerator {
 		} else if (world.provider.getDimension() == DimensionType.NETHER.getId()) {
 			if(ConfigGeneral.activateNetherGeneration) {
 				//Nether
-//				generateStructure(StructureList.WITHER_ALTAR, world, random, blockX, blockZ, ConfigStructures.spawnchanceSpecials, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateStructure(StructureList.SKULL, world, random, blockX, blockZ, ConfigStructures.spawnchanceSkulls, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateDownsetStructure(StructureList.FOSSIL_ENDERDRAGON_2, world, random, blockX, blockZ, ConfigStructures.spawnchanceFossils, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateStructure(StructureList.NETHER_WALL_4, world, random, blockX, blockZ, ConfigStructures.spawnchanceWallRuins, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateStructure(StructureList.NETHER_PORTAL, world, random, blockX, blockZ, ConfigStructures.spawnchanceNetherPortals, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateDownsetStructure(StructureList.FOSSIL_1, world, random, blockX, blockZ, Math.round(ConfigStructures.spawnchanceFossils / 4), BiomeDictionary.getBiomes(Type.NETHER));
-//				generateDownsetStructure(StructureList.FOSSIL_2, world, random, blockX, blockZ, Math.round(ConfigStructures.spawnchanceFossils / 4), BiomeDictionary.getBiomes(Type.NETHER));
-//				generateDownsetStructure(StructureList.BONE_1, world, random, blockX, blockZ, ConfigStructures.spawnchanceBones, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateDownsetStructure(StructureList.BONE_2, world, random, blockX, blockZ, ConfigStructures.spawnchanceBones, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateStructure(StructureList.NETHER_WALL_1, world, random, blockX, blockZ, 200, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateStructure(StructureList.NETHER_WALL_2, world, random, blockX, blockZ, ConfigStructures.spawnchanceWallRuins, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateStructure(StructureList.NETHER_WALL_3, world, random, blockX, blockZ, ConfigStructures.spawnchanceWallRuins, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateStructure(StructureList.NETHER_DUNGEON_1, world, random, blockX, blockZ, ConfigStructures.spawnchanceUndergroundDungeons, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateStructure(StructureList.NETHER_DUNGEON_2, world, random, blockX, blockZ, ConfigStructures.spawnchanceUndergroundDungeons, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateStructure(StructureList.NETHER_DUNGEON_3, world, random, blockX, blockZ, ConfigStructures.spawnchanceUndergroundDungeons, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateStructure(StructureList.NETHER_BASE, world, random, blockX, blockZ, ConfigStructures.spawnchanceUndergroundBases, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateStructure(StructureList.NETHER_BUILDING_1, world, random, blockX, blockZ, ConfigStructures.spawnchanceNetherBuildings, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateStructure(StructureList.NETHER_BUILDING_2, world, random, blockX, blockZ, ConfigStructures.spawnchanceNetherBuildings, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateStructure(StructureList.NETHER_BUILDING_3, world, random, blockX, blockZ, ConfigStructures.spawnchanceNetherBuildings, BiomeDictionary.getBiomes(Type.NETHER));
-//				generateStructure(StructureList.NETHER_VILLAGER_HOUSE, world, random, blockX, blockZ, ConfigStructures.spawnchanceVillagerHouses, BiomeDictionary.getBiomes(Type.NETHER));
+				generateStructure(StructureList.WITHER_ALTAR, world, random, blockX, blockZ, ConfigStructures.spawnchanceSpecials, BiomeDictionary.getBiomes(Type.NETHER));
+				generateStructure(StructureList.SKULL, world, random, blockX, blockZ, ConfigStructures.spawnchanceSkulls, BiomeDictionary.getBiomes(Type.NETHER));
+				generateDownsetStructure(StructureList.FOSSIL_ENDERDRAGON_2, world, random, blockX, blockZ, ConfigStructures.spawnchanceFossils, BiomeDictionary.getBiomes(Type.NETHER));
+				generateStructure(StructureList.NETHER_WALL_4, world, random, blockX, blockZ, ConfigStructures.spawnchanceWallRuins, BiomeDictionary.getBiomes(Type.NETHER));
+				generateStructure(StructureList.NETHER_PORTAL, world, random, blockX, blockZ, ConfigStructures.spawnchanceNetherPortals, BiomeDictionary.getBiomes(Type.NETHER));
+				generateDownsetStructure(StructureList.FOSSIL_1, world, random, blockX, blockZ, Math.round(ConfigStructures.spawnchanceFossils / 4), BiomeDictionary.getBiomes(Type.NETHER));
+				generateDownsetStructure(StructureList.FOSSIL_2, world, random, blockX, blockZ, Math.round(ConfigStructures.spawnchanceFossils / 4), BiomeDictionary.getBiomes(Type.NETHER));
+				generateDownsetStructure(StructureList.BONE_1, world, random, blockX, blockZ, ConfigStructures.spawnchanceBones, BiomeDictionary.getBiomes(Type.NETHER));
+				generateDownsetStructure(StructureList.BONE_2, world, random, blockX, blockZ, ConfigStructures.spawnchanceBones, BiomeDictionary.getBiomes(Type.NETHER));
+				generateStructure(StructureList.NETHER_WALL_1, world, random, blockX, blockZ, 200, BiomeDictionary.getBiomes(Type.NETHER));
+				generateStructure(StructureList.NETHER_WALL_2, world, random, blockX, blockZ, ConfigStructures.spawnchanceWallRuins, BiomeDictionary.getBiomes(Type.NETHER));
+				generateStructure(StructureList.NETHER_WALL_3, world, random, blockX, blockZ, ConfigStructures.spawnchanceWallRuins, BiomeDictionary.getBiomes(Type.NETHER));
+				generateStructure(StructureList.NETHER_DUNGEON_1, world, random, blockX, blockZ, ConfigStructures.spawnchanceUndergroundDungeons, BiomeDictionary.getBiomes(Type.NETHER));
+				generateStructure(StructureList.NETHER_DUNGEON_2, world, random, blockX, blockZ, ConfigStructures.spawnchanceUndergroundDungeons, BiomeDictionary.getBiomes(Type.NETHER));
+				generateStructure(StructureList.NETHER_DUNGEON_3, world, random, blockX, blockZ, ConfigStructures.spawnchanceUndergroundDungeons, BiomeDictionary.getBiomes(Type.NETHER));
+				generateStructure(StructureList.NETHER_BASE, world, random, blockX, blockZ, ConfigStructures.spawnchanceUndergroundBases, BiomeDictionary.getBiomes(Type.NETHER));
+				generateStructure(StructureList.NETHER_BUILDING_1, world, random, blockX, blockZ, ConfigStructures.spawnchanceNetherBuildings, BiomeDictionary.getBiomes(Type.NETHER));
+				generateStructure(StructureList.NETHER_BUILDING_2, world, random, blockX, blockZ, ConfigStructures.spawnchanceNetherBuildings, BiomeDictionary.getBiomes(Type.NETHER));
+				generateStructure(StructureList.NETHER_BUILDING_3, world, random, blockX, blockZ, ConfigStructures.spawnchanceNetherBuildings, BiomeDictionary.getBiomes(Type.NETHER));
+				generateStructure(StructureList.NETHER_VILLAGER_HOUSE, world, random, blockX, blockZ, ConfigStructures.spawnchanceVillagerHouses, BiomeDictionary.getBiomes(Type.NETHER));
 			}	
 		} else if (ConfigGeneral.additionalDimensions.length > 0) {
 			for (int i = 0; i<ConfigGeneral.additionalDimensions.length; i++) {
