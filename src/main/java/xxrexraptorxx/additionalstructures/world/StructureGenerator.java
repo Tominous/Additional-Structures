@@ -250,11 +250,11 @@ public class StructureGenerator extends WorldGenerator {
 		
 		//Nether Generator
 		if(world.provider.getDimension() == DimensionType.NETHER.getId()) {
-		/**
+		
 			while(world.getBlockState(new BlockPos(x, y, z)).getBlock() == Blocks.NETHERRACK.getDefaultState() && world.getBlockState(new BlockPos(x, y + 1, z)).getBlock() == Blocks.AIR.getDefaultState()) {
 				y--;
 			}
-		**/
+		
 			
 		// Normal generator
 		} else {
